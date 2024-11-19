@@ -3,6 +3,9 @@ package proj3.example.student_survey.model;
 import jakarta.persistence.*;
 import java.util.Date;
 
+
+
+
 @Entity
 @Table(name = "surveydata")
 public class Survey {
@@ -40,16 +43,13 @@ public class Survey {
 	    private Date survey_date;
 
 	    @Column(name = "likes_about_campus", nullable = false)
-	    @Enumerated(EnumType.STRING)
-	    private CampusPreference likes_about_campus;
+	    private String likes_about_campus;
 
 	    @Column(name = "interested_in_uni", nullable = false)
-	    @Enumerated(EnumType.STRING)
-	    private InterestSource interested_in_uni;
+	    private String interested_in_uni;
 
 	    @Column(name = "recommend", nullable = false)
-	    @Enumerated(EnumType.STRING)
-	    private Recommendation recommend;
+	    private String recommend;
 
     
     //getters and setters
@@ -134,29 +134,49 @@ public class Survey {
         this.survey_date = surveyDate;
     }
 
-    public CampusPreference getLikesAboutCampus() {
+    public String getLikesAboutCampus() {
         return likes_about_campus;
     }
 
-    public void setLikesAboutCampus(CampusPreference likesAboutCampus) {
+    public void setLikesAboutCampus(String likesAboutCampus) {
         this.likes_about_campus = likesAboutCampus;
     }
 
-    public InterestSource getInterestedInUni() {
+    public String getInterestedInUni() {
         return interested_in_uni;
     }
 
-    public void setInterestedInUni(InterestSource interestedInUni) {
+    public void setInterestedInUni(String interestedInUni) {
         this.interested_in_uni = interestedInUni;
     }
 
-    public Recommendation getRecommend() {
+    public String getRecommend() {
         return recommend;
     }
 
-    public void setRecommend(Recommendation recommend) {
+    public void setRecommend(String recommend) {
         this.recommend = recommend;
     }
     
+    
+    @Override
+    public String toString() {
+        return "Survey{" +
+                "id=" + id +
+                ", first_Name='" + first_Name + '\'' +
+                ", last_Name='" + last_Name + '\'' +
+                ", street_Address='" + street_Address + '\'' +
+                ", city='" + city + '\'' +
+                ", state='" + state + '\'' +
+                ", zip=" + zip +
+                ", tele_Number=" + tele_Number +
+                ", email='" + email + '\'' +
+                ", survey_date=" + survey_date +
+                ", likes_about_campus=" + likes_about_campus +
+                ", interested_in_uni=" + interested_in_uni +
+                ", recommend=" + recommend +
+                '}';
+    }
+
     
 }
