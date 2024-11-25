@@ -51,7 +51,7 @@ pipeline {
         stage('Deployment') {
             steps {
                 script {
-                    sh "kubectl set image deployment/kshah33-deployment01 container-0=${env.IMAGE_NAME}"
+                    sh "kubectl set image deployment/kshah33-deployment1 container-0=${env.IMAGE_NAME}"
                 }
             }
         }
