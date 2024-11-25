@@ -1,0 +1,8 @@
+proj3\example\student_survey\model\InterestSource.class
+proj3\example\student_survey\model\Recommendation.class
+proj3\example\student_survey\StudentSurveyApplication.class
+proj3\example\student_survey\respository\SurveyRepository.class
+proj3\example\student_survey\model\Survey.class
+proj3\example\student_survey\model\CampusPreference.class
+proj3\example\student_survey\service\SurveyService.class
+proj3\example\student_survey\controller\SurveyController.class
